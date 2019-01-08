@@ -1,0 +1,131 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Emil Peter, NCSU, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.11
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+D:\Codes\ESF-master\Project 1\Serial-Demo.uvprojx
+Project File Date:  09/23/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling queue.c...
+compiling UART.c...
+src\UART.c(40): warning:  #550-D: variable "temp"  was set but never used
+  	uint8_t temp;
+src\UART.c: 1 warning, 0 errors
+compiling main.c...
+src\main.c(21): warning:  #223-D: function "Control_RGB_LEDs" declared implicitly
+  	Control_RGB_LEDs(0, 1, 0);
+src\main.c(33): warning:  #175-D: subscript out of range
+  		case 3:ADC0->SC1[22] = 0x00; // start conversion on channel 0
+src\main.c(35): warning:  #175-D: subscript out of range
+  						while (!(ADC0->SC1[22] & ADC_SC1_COCO_MASK))
+src\main.c(38): warning:  #175-D: subscript out of range
+  						res = ADC0->R[22];
+src\main.c(40): warning:  #175-D: subscript out of range
+  		case 6:ADC0->SC1[5] = 0x00; // start conversion on channel 0
+src\main.c(42): warning:  #175-D: subscript out of range
+  						while (!(ADC0->SC1[5] & ADC_SC1_COCO_MASK))
+src\main.c(45): warning:  #175-D: subscript out of range
+  						res = ADC0->R[5];
+src\main.c(47): warning:  #175-D: subscript out of range
+  		case 11:ADC0->SC1[2] = 0x00; // start conversion on channel 0
+src\main.c(49): warning:  #175-D: subscript out of range
+  						while (!(ADC0->SC1[2] & ADC_SC1_COCO_MASK))
+src\main.c(52): warning:  #175-D: subscript out of range
+  						res = ADC0->R[2];
+src\main.c(61): warning:  #175-D: subscript out of range
+  		case 23:ADC0->SC1[30] = 0x00; // start conversion on channel 0
+src\main.c(63): warning:  #175-D: subscript out of range
+  						while (!(ADC0->SC1[30] & ADC_SC1_COCO_MASK))
+src\main.c(66): warning:  #175-D: subscript out of range
+  						res = ADC0->R[30];
+src\main.c(77): warning:  #223-D: function "Control_RGB_LEDs" declared implicitly
+  	Control_RGB_LEDs(1, 0, 1);
+src\main.c(74): warning:  #177-D: variable "res"  was declared but never referenced
+  	int res;
+src\main.c(101): warning:  #223-D: function "Control_RGB_LEDs" declared implicitly
+  	Control_RGB_LEDs(0, 0, 1);
+src\main.c(115): warning:  #223-D: function "Init_ADC" declared implicitly
+  								Init_ADC();
+src\main.c(116): warning:  #223-D: function "Init_DMA_To_Copy" declared implicitly
+  								Init_DMA_To_Copy();
+src\main.c(117): warning:  #223-D: function "Init_TPM0" declared implicitly
+  								Init_TPM0();
+src\main.c(122): warning:  #223-D: function "Init_DMA_To_Copy1" declared implicitly
+  								Init_DMA_To_Copy1();
+src\main.c(130): warning:  #223-D: function "atoi" declared implicitly
+  								number=atoi(channel_number);
+src\main.c(95): warning:  #177-D: variable "buffer"  was declared but never referenced
+  	uint8_t buffer[80],c[10], * bp,channel_number[5],sampling_period[10],number_of_samples[10];
+src\main.c(95): warning:  #177-D: variable "bp"  was declared but never referenced
+  	uint8_t buffer[80],c[10], * bp,channel_number[5],sampling_period[10],number_of_samples[10];
+src\main.c(181): warning:  #951-D: return type of function "main" must be "int"
+  void main(void)
+src\main.c(184): warning:  #223-D: function "Init_RGB_LEDs" declared implicitly
+  	Init_RGB_LEDs();
+src\main.c(185): warning:  #223-D: function "Init_TPM1" declared implicitly
+  	Init_TPM1(750);
+src\main.c(186): warning:  #223-D: function "Init_Debug_signals" declared implicitly
+  	Init_Debug_signals();
+src\main.c: 27 warnings, 0 errors
+compiling delay.c...
+assembling startup_MKL25Z4.s...
+compiling timers.c...
+compiling LEDs.c...
+compiling system_MKL25Z4.c...
+linking...
+Program Size: Code=10788 RO-data=864 RW-data=24 ZI-data=1360  
+".\Objects\Serial-Demo.axf" - 0 Error(s), 28 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\MKL25Z128xxx4
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+
+   * Component: Keil::Device:Startup:2.5.0
+      Source file:   Device\Source\ARM\startup_MKL25Z4.s
+      Source file:   Device\Source\system_MKL25Z4.c
+      Include file:  Device\Source\system_MKL25Z4.h
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
